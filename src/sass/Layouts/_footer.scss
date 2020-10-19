@@ -14,7 +14,7 @@ footer {
         }
     }  
     .footer__middle {
-        .wrapper {
+        .container {
             @include grid(12, 30px);
     
             ul {
@@ -179,4 +179,28 @@ footer {
     hr {
       @include mt-mb(15px, 10px);
     }
+    .footer__bottom {
+        .container {
+            @include grid(12, 15px);
+            
+            .footer__bottom__left {
+                grid-column: 1/13;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                p {
+                    font-family: 'Roboto';
+                }
+            }
+            .footer__bottom__right {
+                grid-column: 1/13;
+                img {
+                    width: 50%;
+                    display: block;
+                    @include ml-mr(auto, auto);
+                    @include mt-mb(0, 15px);
+                }
+            }
+        }
+      }
 }
