@@ -1,4 +1,4 @@
-.container {
+.container, .wrapper {
     width: 100%;
     @include pl-pr(15px, 15px);
     @include ml-mr(auto, auto);
