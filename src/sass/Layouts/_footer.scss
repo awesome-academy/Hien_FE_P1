@@ -185,20 +185,32 @@ footer {
             
             .footer__bottom__left {
                 grid-column: 1/13;
+                @include md {
+                    grid-column: 1/9;
+                }
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                @include md {
+                    justify-content: flex-start;
+                }
                 p {
                     font-family: 'Roboto';
                 }
             }
             .footer__bottom__right {
                 grid-column: 1/13;
+                @include md {
+                    grid-column: 9/12;
+                }
                 img {
                     width: 50%;
                     display: block;
                     @include ml-mr(auto, auto);
                     @include mt-mb(0, 15px);
+                    @include md {
+                        width: 100%;
+                    }
                 }
             }
         }
