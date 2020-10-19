@@ -58,7 +58,7 @@
         @include transition;
 
         &:first-child {
-            @include pl-pr(19px, 15px);
+            @include pl-pr(15px, 15px);
             border-right: 1px solid;
         }
         &:nth-child(2) {
@@ -69,6 +69,7 @@
             @include pl-pr(19px, 8px);
         }
         i {
+            line-height: 20px;
             @include pl-pr(0, 8px);
         }
         }

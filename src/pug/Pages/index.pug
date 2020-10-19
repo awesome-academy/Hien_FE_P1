@@ -43,3 +43,25 @@ block content
                 .index__detail__time
                   each item in timeBox
                     +index-time-box(item.num, item.text)
+    .index__new-products
+      .wrapper
+        .index__new-products__container
+          .index__new-products__title
+            +title-main('SẢN PHẨM MỚI')
+          .index__new-products__slide
+            input#index-new-products-1(type='radio' name='index-new-products', checked)
+            input#index-new-products-2(type='radio' name='index-new-products')
+            .index__slide__full-images--hidden
+              .index__slide__full-images#new_products
+                each item in indexNewProduct
+                  +product(item.link, item.title, item.price1, item.price2, item.corner)(style=`background-color: ${item.color}; color: ${item.color}`)
+            .index__slide__arrow
+              .index__slide__arrow--left
+                label(for="index-new-products-1")
+                  i.fa.fa-arrow-left
+              .index__slide__arrow--right
+                label(for="index-new-products-2")
+                  i.fa.fa-arrow-right
+    .index__images
+      each link in indexImages
+        +index-images-item(link)
