@@ -276,6 +276,13 @@
     p {
       color: $color-hover;
       font-family: utm-caviar;
-      font-size: $font-size-price-product;
+
+      font-size: 25px;
+      @include md {
+          font-size: 30px;
+      }
+      @include lg {
+        font-size: $font-size-price-product;
+      }
     }
 }
