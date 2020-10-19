@@ -5,7 +5,7 @@
 }
 
 .button-add-to-cart button, .button-small button {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .button-big button {
@@ -97,7 +97,7 @@ html {
 
 body {
   font-family: "Times New Roman", Times, serif;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 1.5;
   color: #818181;
@@ -712,6 +712,196 @@ header .header__menu .container .header__menu__list .header__list__menu > li .he
   }
 }
 
+footer .footer__top img {
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 55px;
+}
+@media (min-width: 576px) {
+  footer .footer__top img {
+    display: block;
+    width: 80%;
+  }
+}
+@media (min-width: 1200px) {
+  footer .footer__top img {
+    width: auto;
+  }
+}
+footer .footer__middle .wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 30px;
+}
+footer .footer__middle .wrapper ul li {
+  float: none;
+  margin-top: 0;
+  margin-bottom: 7px;
+}
+footer .footer__middle .wrapper ul li:last-child {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+footer .footer__middle .wrapper ul li a {
+  color: #818181;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+footer .footer__middle .wrapper p {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+footer .footer__middle .wrapper .footer__middle__info {
+  grid-column: 1/13;
+}
+@media (min-width: 576px) {
+  footer .footer__middle .wrapper .footer__middle__info {
+    grid-column: 1/7;
+  }
+}
+@media (min-width: 992px) {
+  footer .footer__middle .wrapper .footer__middle__info {
+    grid-column: 1/3;
+  }
+}
+footer .footer__middle .wrapper .footer__middle__buy {
+  grid-column: 1/13;
+}
+@media (min-width: 576px) {
+  footer .footer__middle .wrapper .footer__middle__buy {
+    grid-column: 8/13;
+  }
+}
+@media (min-width: 992px) {
+  footer .footer__middle .wrapper .footer__middle__buy {
+    grid-column: 3/5;
+  }
+}
+footer .footer__middle .wrapper .footer__middle__email {
+  grid-column: 1/13;
+}
+@media (min-width: 576px) {
+  footer .footer__middle .wrapper .footer__middle__email {
+    grid-column: 1/7;
+  }
+}
+@media (min-width: 992px) {
+  footer .footer__middle .wrapper .footer__middle__email {
+    grid-column: 5/9;
+  }
+}
+footer .footer__middle .wrapper .footer__middle__email p:last-of-type {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #818181;
+  font-size: 14px;
+  text-transform: none;
+}
+footer .footer__middle .wrapper .footer__middle__email form {
+  display: flex;
+}
+footer .footer__middle .wrapper .footer__middle__email form input {
+  width: 68%;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #818181;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: italic;
+  outline: none;
+}
+footer .footer__middle .wrapper .footer__middle__email form .footer__email__submit {
+  display: flex;
+  margin-left: -1px;
+}
+footer .footer__middle .wrapper .footer__middle__email form .footer__email__submit:hover .footer__email__submit--button {
+  background-color: #dfa949;
+}
+footer .footer__middle .wrapper .footer__middle__email form .footer__email__submit:hover .footer__email__submit--triangle {
+  border-left-color: #dfa949;
+}
+footer .footer__middle .wrapper .footer__middle__email form .footer__email__submit--button {
+  padding-left: 18px;
+  padding-right: 15px;
+  background-color: #252525;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: inherit;
+}
+footer .footer__middle .wrapper .footer__middle__email form .footer__email__submit--triangle {
+  border-top: 14px solid transparent;
+  border-left: 18px solid #252525;
+  border-bottom: 14px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+footer .footer__middle .wrapper .footer__middle__email .footer__email__social ul li {
+  float: left;
+  padding-left: 0;
+  padding-right: 10px;
+  margin-top: 22px;
+  margin-bottom: 0;
+}
+footer .footer__middle .wrapper .footer__middle__contact {
+  grid-column: 1/13;
+}
+@media (min-width: 576px) {
+  footer .footer__middle .wrapper .footer__middle__contact {
+    grid-column: 8/13;
+  }
+}
+@media (min-width: 992px) {
+  footer .footer__middle .wrapper .footer__middle__contact {
+    grid-column: 9/12;
+  }
+}
+footer .footer__middle .wrapper .footer__middle__contact ul li {
+  float: left;
+  display: block;
+  width: 100%;
+  align-items: flex-start;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+@media (min-width: 576px) {
+  footer .footer__middle .wrapper .footer__middle__contact ul li {
+    display: flex;
+    width: auto;
+  }
+}
+footer .footer__middle .wrapper .footer__middle__contact ul li i {
+  margin-left: 0;
+  margin-right: 8px;
+  line-height: 20px;
+  color: #252525;
+}
+footer .footer__middle .wrapper .footer__middle__contact ul li a {
+  font-size: 14px;
+  text-transform: none;
+}
+footer .footer__middle .wrapper .footer__middle__contact ul li:nth-child(2) a::after {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+@media (min-width: 576px) {
+  footer .footer__middle .wrapper .footer__middle__contact ul li:nth-child(2) a::after {
+    content: "-";
+  }
+}
+footer .footer__middle .wrapper .footer__middle__contact ul li:nth-child(4) a::after {
+  content: "";
+  padding-left: 7px;
+  padding-right: 7px;
+}
+footer hr {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
 .container, .wrapper {
   width: 100%;
   padding-left: 15px;
@@ -847,7 +1037,7 @@ header .header__menu .container .header__menu__list .header__list__menu > li .he
   margin-bottom: 0;
 }
 .blog-item__time p {
-  font-size: 14px;
+  font-size: 12px;
   color: #818181;
   opacity: 0.5;
 }
@@ -1175,7 +1365,7 @@ header .header__menu .container .header__menu__list .header__list__menu > li .he
   background-color: transparent;
   color: #818181;
   font-family: "Open Sans";
-  font-size: 14px;
+  font-size: 12px;
 }
 .products__content .wrapper .products__content__container .products__content__left .products__left__tag ul li button:hover {
   background-color: #dfa949;
@@ -1228,7 +1418,7 @@ header .header__menu .container .header__menu__list .header__list__menu > li .he
 }
 .products__content .wrapper .products__content__container .products__content__right .products__right__pag .products__pag__right a {
   color: #818181;
-  font-size: 14px;
+  font-size: 12px;
   transition: all 0.3s ease;
 }
 .products__content .wrapper .products__content__container .products__content__right .products__right__pag .products__pag__right a:first-child {
