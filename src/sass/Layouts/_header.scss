@@ -1,50 +1,326 @@
-.header {
-    &__top {
-        background-color: $bg-color;
-        background: rgba(255, 255, 255, 0.1);
-        font-size: 1.2rem;
-        position: absolute;
-        z-index: 100;
-        width: 100%;
-        padding: .8rem 0;
-        .row {
-            justify-content: space-between;
-        }
-        &__menu {
-            ul {
+header {
+    position: relative;
+  
+    .header__top {
+        .header__top--relative, .header__top--absolute {
+            z-index: $z-index-header-top-menu;
+            
+            .container {
                 display: flex;
-                justify-content: flex-start;
-                li {
-                    &:not(:last-child)::after {
-                        content: '-';
-                        padding: 0 1rem;
-                        color: $text-white;
+                justify-content: space-between;
+        
+                .header__top__left {
+                    display: flex;
+                    align-items: center;
+                    ul {
+                        display: none;
+                        @include lg {
+                            display: block;
+                        }
+                        li {
+                            &:not(:last-child)::after {
+                                color: white;
+                                @include pl-pr(12px, 12px);
+                                content: "-";
+                            }
+                            a {
+                                color: white;
+                                position: relative;
+                                @include transition;
+                                
+                                &:hover {
+                                    text-decoration: underline ;
+                                }
+                                span {
+                                    position: absolute;
+                                    left: 100%;
+                                    bottom: 70%;
+                                    @include pl-pr(3px, 3px);
+                                    border-radius: 500%;
+                                    background-color: $color-red;
+                                    color: $color-white;
+                                    font-size: 10px;
+                                }
+                            }
+                        }
+                    }
+                    &:hover ul {
+                        @include lg-max {
+                            position: absolute;
+                            display: block;
+                            top: 100%;
+                            left: 0;
+                            width: 100%;
+                            text-align: center;
+                            box-shadow: 0px 8px 8px rgba(0,0,0,0.2);
+                            
+                            li {
+                                float: none;
+                                @include pt-pb(5px, 5px);
+                                
+                                &:not(:last-child)::after {
+                                    content: none;
+                                }
+                            }
+                        }
+                    }
+                    i {
+                        cursor: pointer;
+                        @include transition;
+                        @include lg {
+                            display: none;
+                        }
                     }
                 }
-                a {
-                    color: $text-white;
-                    transition: all .3s;
-                    &:hover {
-                        border-bottom: 1px solid $primary-color;
-                        color: $primary-color;
+                .header__top__right {
+                    input, button {
+                        background-color: transparent;
                     }
+                    input {
+                        color: white;
+                        width: 230px;
+                        @include pl-pr(10px, 10px);
+                        border: none;
+                        border-left: 1px solid $color-white;
+                        background-color: transparent;
+                        font-style: italic;
+                    }
+                }
+                i {
+                    color: white;
+                    @include pt-pb(10px, 10px);
+                    font-size: $font-size-header-top-menu;
+                    @include transition;
                 }
             }
         }
-        &__search {
-            input {
-                color: $text-white;
-                font-style: italic;
-                background-color: transparent;
-                border: none;
-                border-left: 1px solid white;
-                padding-left: 1rem;
-                width: 22rem;
-                &:focus {
-                    outline: none;
+        .header__top--relative {
+            position: fixed;
+            width: 100%;
+            background-color: $color-primary;
+    
+            .header__top__left {
+                &:hover ul {
+                    @include lg-max {
+                        background-color: $color-white;
+                    }
                 }
+                ul li a {
+                    color: $color-black;
+                }
+            }
+            i {
+                color: $color-black;
+            }
+        }
+        .header__top--absolute {
+            position: absolute;
+            left: 0;
+            right: 0;
+            background-color: $color-transparent;
+    
+            .header__top__left {
+                &:hover ul {
+                    @include lg-max {
+                        background-color: $color-transparent;
+                    }
+                }
+                ul li a {
+                    color: $color-primary;
+                }
+            }
+            i {
+                color: $color-primary;
             }
             
         }
+        .header__top__left {
+            #modal {
+                display: none;
+        
+                .modal {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: $color-modal-bg;
+        
+                    &__content {
+                        position: relative;
+                        background-color: $color-white;
+                        top: 25%;
+                        left: 25%;
+                        width: 760px;
+                        height: 360px;
+                        animation: animatetop 0.7s;
+            
+                        @keyframes animatetop {
+                            from {
+                                top: -100%;
+                                opacity: 0;
+                            }
+                            to {
+                                top: 25%;
+                                opacity: 1;
+                            }
+                        }
+                        & > img {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            height: 100%;
+                        }
+                        & > i {
+                            position: absolute;
+                            left: 100%;
+                            bottom: 96%;
+                            display: block;
+                            color: $color-modal-close;
+                            font-size: $font-size-modal-close;
+                        }
+                        &__text {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            height: 100%;
+                            @include ml-mr(30%, 10%);
+                            color: $color-black;
+                            font-size: $font-size-modal-content;
+                            text-align: center;
+            
+                            & > p {
+                                &:first-of-type {
+                                    font-size: $font-size-modal-title;
+                                }
+                                &:last-of-type {
+                                    @include mt-mb(30px, 0);
+                                }
+                            }
+                            form {
+                                display: flex;
+                                @include mt-mb(20px, 0);
+                                
+                
+                                input {
+                                    @include pl-pr(10px, 5px);
+                                }
+                                button {
+                                    @include pl-pr(10px, 10px); 
+                                    @include pt-pb(10px, 10px);           
+                                    background-color: $color-hover;
+                                    color: $color-white;
+                                }
+                            }
+                            
+                            .input-checkbox {
+                                @include mt-mb(25px, 0);
+                                
+                                input {
+                                    position: relative;
+                                    visibility: visible;
+                
+                                    &::after {
+                                        position: absolute;
+                                        visibility: hidden;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+          }
+    }
+    .header__slide {
+        position: relative;
+        overflow: hidden;
+    
+        input {
+            position: absolute;
+            visibility: hidden;
+        }
+        &__full-images {
+            display: flex;
+            transform: translateX(0%);
+            @include transition;
+    
+            img {
+                min-width: 100%;
+                height: 332px;
+        
+                @include md {
+                    height: 664px;
+                }
+            }
+        }
+        #header-slide-1:checked ~ .header__slide__full-images {
+            transform: translateX(0%);
+        }
+        #header-slide-2:checked ~ .header__slide__full-images{
+            transform: translateX(-100%);
+        }
+        #header-slide-3:checked ~ .header__slide__full-images {
+            transform: translateX(-200%);
+        }
+    
+        &__text {
+            position: absolute;
+            top: 90px;
+            left: 0;
+            right: 0;
+    
+            .container {
+                position: relative;
+                height: 420px;
+                img {
+                    &:first-child{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 60%;
+                        @include md {
+                            width: 75%;
+                        }
+                    }
+                    &:nth-child(2) {
+                        position: absolute;
+                        right: 26%;
+                        top: 24%;
+                        width: 34%;
+                    }
+                    &:nth-child(3) {
+                        position: absolute;
+                        right: 7%;
+                        bottom: 14%;
+                        width: 18%;
+                    }
+                    
+                }
+            }
+        }
+        &__rectangle {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 34px;
+            display: flex;
+            justify-content: center;
+    
+            label {
+                width: 36px;
+                height: 5px;
+                @include ml-mr(0, 7px);
+                border: 1px solid $color-white;
+                background-color: none;
+                cursor: pointer;
+                @include transition;
+        
+                &:hover {
+                    background-color: $color-hover;
+                }
+            }
+          }
     }
 }

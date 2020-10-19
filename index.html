@@ -13,24 +13,61 @@
   </head>
   <body>
     <!--HEADER-->
-    <header class="header">
+    <header>
       <div class="header__top">
-        <div class="container">
-          <div class="row">
-            <div class="header__top__menu">
+        <div class="header__top--absolute">
+          <div class="container">
+            <div class="header__top__left"><i class="fa fa-bars"></i>
               <ul>
-                <li><a href="#">Tài khoản của tôi</a></li>
-                <li><a href="#">Trạng thái đơn hàng</a></li>
-                <li><a href="#">Danh sách ưa thích</a></li>
-                <li><a href="#">Giỏ hàng</a></li>
-                <li><a href="#">Đăng nhập</a></li>
-                <li><a href="#">Đăng ký</a></li>
+                <li><a href="./address.html">Tài khoản của tôi</a></li>
+                <li><a href="./order.html">Trạng thái đơn hàng</a></li>
+                <li><a onclick="document.getElementById('modal').style.display='block'">Danh sách ưa thích</a></li>
+                <li><a href="./cart.html">Giỏ hàng</a></li>
+                <li><a href="./login.html">Đặng nhập</a></li>
+                <li><a href="./register.html">Đăng ký</a></li>
               </ul>
+              <div id="modal">
+                <div class="modal">
+                  <div class="modal__content"><img src="./assets/images/modal.png"/><i class="fa fa-times" onclick="document.getElementById('modal').style.display='none'"></i>
+                    <div class="modal__content__text">
+                      <p>Gửi Email</p>
+                      <p>Đăng ký Email ngay hôm nay để nhận được thông tin về các sự kiện, các chương trình giảm giá của chúng tôi sớm nhất!</p>
+                      <form>
+                        <input/>
+                        <button>GỬI EMAIL</button>
+                      </form>
+                      <div class="input-checkbox">
+                        <input type="checkbox" id="Không hiển thị lại thông báo này" value=""/>
+                        <label for="Không hiển thị lại thông báo này">Không hiển thị lại thông báo này</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="header__top__search">
-              <input type="text" placeholder="Tìm kiếm ở đây ..."/><i class="fa fa-search"></i>
+            <div class="header__top__right">
+              <form>
+                <input placeholder="Tìm kiếm ở đây ..."/>
+                <button><i class="fa fa-search"></i></button>
+              </form>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="header__slide">
+        <input id="header-slide-1" type="radio" name="header-slide"/>
+        <input id="header-slide-2" type="radio" name="header-slide"/>
+        <input id="header-slide-3" type="radio" name="header-slide"/>
+        <div class="header__slide__full-images"><img src="./assets/images/header-slide-1.jpg"/><img src="./assets/images/header-slide-2.jpg"/><img src="./assets/images/header-slide-3.jpg"/>
+        </div>
+        <div class="header__slide__text">
+          <div class="container"><img src="./assets/images/header-slider-text-1.png" alt=""/><img src="./assets/images/header-slider-text-2.png" alt=""/><img src="./assets/images/header-slider-text-3.png" alt=""/>
+          </div>
+        </div>
+        <div class="header__slide__rectangle">
+          <label for="header-slide-1"></label>
+          <label for="header-slide-2"></label>
+          <label for="header-slide-3"></label>
         </div>
       </div>
     </header>
