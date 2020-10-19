@@ -19,12 +19,12 @@ header {
                         }
                         li {
                             &:not(:last-child)::after {
-                                color: white;
+                                color: $color-header-top;
                                 @include pl-pr(12px, 12px);
                                 content: "-";
                             }
                             a {
-                                color: white;
+                                color: $color-header-top;
                                 position: relative;
                                 @include transition;
                                 
@@ -77,17 +77,20 @@ header {
                         background-color: transparent;
                     }
                     input {
-                        color: white;
+                        color: $color-header-top;
                         width: 230px;
                         @include pl-pr(10px, 10px);
                         border: none;
-                        border-left: 1px solid $color-white;
+                        border-left: 1px solid $color-header-top;
                         background-color: transparent;
                         font-style: italic;
+                        &::placeholder {
+                            color: $color-white-1;
+                        }
                     }
                 }
                 i {
-                    color: white;
+                    color: $color-header-top;
                     @include pt-pb(10px, 10px);
                     font-size: $font-size-header-top-menu;
                     @include transition;
