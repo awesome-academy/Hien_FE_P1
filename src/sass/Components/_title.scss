@@ -6,13 +6,20 @@
         text-align: center;
         letter-spacing: 4px;
     }
+    img {
+        width: 190px;
+    }
 }
 .title-product {
     p {
         color: initial;
-        font-size: $font-size-title-product;
+        font-size: 20px;
+        @include lg {
+            font-size: $font-size-title-product;
+        }
     }
     img {
+        width: 65px;
         @include mt-mb(5px, 0);
     }
 }
