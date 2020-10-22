@@ -1,4 +1,4 @@
-extends ../Layouts/default-layout.pug
+extends ../layouts/default-layout.pug
 
 block title
   title Trang chủ
@@ -48,18 +48,18 @@ block content
         .index__new-products__container
           .index__new-products__title
             +title-main('SẢN PHẨM MỚI')
-          .index__new-products__slide
+          .products__slide
             input#index-new-products-1(type='radio' name='index-new-products', checked)
             input#index-new-products-2(type='radio' name='index-new-products')
-            .index__slide__full-images--hidden
-              .index__slide__full-images#new_products
+            .products__slide__full-images--hidden
+              .products__slide__full-images#new_products
                 each item in indexNewProduct
                   +product(item.link, item.title, item.price1, item.price2, item.corner)(style=`background-color: ${item.color}; color: ${item.color}`)
-            .index__slide__arrow
-              .index__slide__arrow--left
+            .products__slide__arrow
+              .products__slide__arrow--left
                 label(for="index-new-products-1")
                   i.fa.fa-arrow-left
-              .index__slide__arrow--right
+              .products__slide__arrow--right
                 label(for="index-new-products-2")
                   i.fa.fa-arrow-right
     .index__images
@@ -70,17 +70,47 @@ block content
         .index__selling-products__container
           .index__selling-products__title
             +title-main('SẢN PHẨM BÁN CHẠY')
-          .index__selling-products__slide
+          .products__slide
             input#index-selling-products-1(type='radio' name='index-selling-products', checked)
             input#index-selling-products-2(type='radio' name='index-selling-products')
-            .index__slide__full-images--hidden
-              .index__slide__full-images#best_products
+            .products__slide__full-images--hidden
+              .products__slide__full-images#best_products
                 each item in indexSellingProduct
                   +product(item.link, item.title, item.price1, item.price2, item.corner)(style=`background-color: ${item.color}; color: ${item.color}`)
-            .index__slide__arrow
-              .index__slide__arrow--left
+            .products__slide__arrow
+              .products__slide__arrow--left
                 label(for="index-selling-products-1")
                   i.fa.fa-arrow-left
-              .index__slide__arrow--right
+              .products__slide__arrow--right
                 label(for="index-selling-products-2")
                   i.fa.fa-arrow-right
+    .index__blog-customer
+      .wrapper
+        .index__blog-customer__container
+          .index__blog
+            .index__blog__title
+              +title-main('TIN TỨC & BLOG')
+            .index__blog__item
+              +blog-item(blogList[0].link, blogList[0].text1, blogList[0].text2, blogList[0].text3)
+              +blog-item(blogList[1].link, blogList[1].text1, blogList[1].text2, blogList[1].text3)
+          .index__customer
+            - var n = 1;
+            while n < 4
+                input(id=`customer-slide-${n++}`  type='radio' name='header-slide')
+            .index__customer__title
+              +title-main('KHÁCH HÀNG')
+            .index__customer__content
+              each item in indexCustomer
+                .index__customer--wrapper
+                  img(src='./assets/images/index-customer-circle.png')
+                  .index__content__comment
+                    p= item.comment
+                    a(href='#') Read more
+                  .index__content__avatar
+                    img(src= item.srcImg)
+                    p= item.name
+                    p= item.title
+            .index__content__dots
+              - var n = 1;
+              while n < 4
+                label(for=`customer-slide-${n++}`)
