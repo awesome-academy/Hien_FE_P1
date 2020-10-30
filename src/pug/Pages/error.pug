@@ -1,0 +1,22 @@
+extends ../Layouts/default-layout
+
+block title
+  title Wine House - 404 Not Found
+
+block header
+
+block footer
+
+block content
+  .error
+    img(src='./assets/images/error-bg.png')
+    .error__content
+      img(src='./assets/images/error-logo.png')
+      ul 
+       each item in contactLink
+        li 
+          a(href=item.link)= item.name
+          i.fa.fa-caret-right
+      .error__content__input
+        input
+        i.fa.fa-search
