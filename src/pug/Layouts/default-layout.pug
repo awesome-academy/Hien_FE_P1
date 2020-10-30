@@ -15,9 +15,11 @@ html(lang="en")
         link(rel="stylesheet", href="./assets/css/main.css")
     body
         //HEADER
-        include ../Partials/header.pug
+        block header
+            include ../Partials/header.pug
 
         block content
 
         //FOOTER
-        include ../partials/footer.pug
+        block footer
+            include ../partials/footer.pug
