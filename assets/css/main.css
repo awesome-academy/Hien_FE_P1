@@ -3249,4 +3249,141 @@ footer .footer__bottom .container .footer__bottom__right img {
   margin-bottom: 0;
 }
 
+.order .order__title {
+  margin-top: 25px;
+  margin-bottom: 0;
+}
+.order .order__content {
+  margin-top: 30px;
+  margin-bottom: 90px;
+}
+.order .order__content .order__content__container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 30px;
+  color: #000000;
+  font-size: 14px;
+}
+.order .order__content .order__content__container .order__content__left {
+  grid-column: 1/13;
+}
+@media (min-width: 992px) {
+  .order .order__content .order__content__container .order__content__left {
+    grid-column: 1/10;
+  }
+}
+.order .order__content .order__content__container .order__content__left .order__left__title {
+  padding-top: 30px;
+  padding-bottom: 35px;
+  padding-left: 20px;
+  padding-right: 0;
+  border: 1px solid #e6e6e6;
+  background-color: #fafafa;
+}
+.order .order__content .order__content__container .order__content__left .order__left__title p {
+  font-size: 16px;
+}
+.order .order__content .order__content__container .order__content__left .order__left__title ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+.order .order__content .order__content__container .order__content__left .order__left__title ul li {
+  float: none;
+  border-right: 1px solid #e6e6e6;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+.order .order__content .order__content__container .order__content__left .order__left__title ul li:first-child, .order .order__content .order__content__container .order__content__left .order__left__title ul li:nth-child(7) {
+  padding-left: 0;
+  padding-right: 12px;
+}
+.order .order__content .order__content__container .order__content__left .order__left__title ul li:not(:first-child):not(:nth-child(7)) {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.order .order__content .order__content__container .order__content__left .order__left__title ul li:last-child, .order .order__content .order__content__container .order__content__left .order__left__title ul li:nth-child(6) {
+  border-right: none;
+}
+.order .order__content .order__content__container .order__content__left .order__left__title ul li a {
+  color: inherit;
+}
+.order .order__content .order__content__container .order__content__left .order__left__table table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+.order .order__content .order__content__container .order__content__left .order__left__table table tr {
+  border: 1px solid #e6e6e6;
+}
+.order .order__content .order__content__container .order__content__left .order__left__table table tr:not(:first-child):not(:last-child) {
+  border-top: none;
+  border-bottom: none;
+}
+.order .order__content .order__content__container .order__content__left .order__left__table table tr:last-child {
+  border-top: none;
+}
+.order .order__content .order__content__container .order__content__left .order__left__table table tr:last-child td {
+  padding-top: 22px;
+  padding-bottom: 10px;
+}
+.order .order__content .order__content__container .order__content__left .order__left__table table tr th, .order .order__content .order__content__container .order__content__left .order__left__table table tr td {
+  padding-left: 18px;
+  padding-right: 18px;
+  vertical-align: top;
+  border-right: 1px solid #e6e6e6;
+}
+.order .order__content .order__content__container .order__content__left .order__left__table table tr th {
+  padding-top: 20px;
+  padding-bottom: 12px;
+  font-size: 12px;
+}
+.order .order__content .order__content__container .order__content__left .order__left__table table tr td {
+  padding-top: 22px;
+  padding-bottom: 0;
+  font-size: 14px;
+}
+.order .order__content .order__content__container .order__content__left .order__left__table table tr td:nth-child(2) {
+  text-align: left;
+}
+.order .order__content .order__content__container .order__content__left .order__left__table table tr td:nth-child(2) p:last-child {
+  color: #818181;
+  font-size: 12px;
+}
+.order .order__content .order__content__container .order__content__right {
+  grid-column: 1/13;
+  height: max-content;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border: 1px solid #e6e6e6;
+  background-color: #fafafa;
+  font-size: 16px;
+}
+@media (min-width: 992px) {
+  .order .order__content .order__content__container .order__content__right {
+    grid-column: 10/13;
+  }
+}
+.order .order__content .order__content__container .order__content__right .order__right__title p {
+  font-size: 16px;
+}
+.order .order__content .order__content__container .order__content__right ul li {
+  float: none;
+  display: flex;
+  margin-top: 18px;
+  margin-bottom: 0;
+}
+.order .order__content .order__content__container .order__content__right ul li p {
+  margin-left: 13px;
+  margin-right: 0;
+}
+.order .order__content .order__content__container .order__content__right > p {
+  margin-top: 35px;
+  margin-bottom: 0;
+  text-decoration: underline;
+}
+
 /*# sourceMappingURL=main.css.map */
