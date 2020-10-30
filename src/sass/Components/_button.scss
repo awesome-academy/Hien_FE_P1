@@ -10,14 +10,14 @@
     }
 }
 .button-big {
-    button {
-        height: 45px;
-        @include pl-pr(45px, 45px);
-        @extend %button-big;
+    line-height: 45px;
+    height: 45px;
+    @include pl-pr(45px, 45px);
+    @extend %button-big;
 
-        &:hover {
+    &:hover {
         background-color: $color-hover;
-        }
+        color: white !important;
     }
 }
 .button-address {
