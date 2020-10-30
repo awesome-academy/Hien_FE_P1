@@ -17,7 +17,7 @@ block content
           .register__content__title
             p THÔNG TIN CÁ NHÂN
           .register__content__form
-            form
+            form(action="#", method="post")
               +input-text('Tên trước', true, "")
               +input-text('Tên sau', true, "")
               +input-text('Email', true, "")
@@ -28,7 +28,6 @@ block content
               +input-text('Mật khẩu', true, "")
               +input-text('Xác nhận mật khẩu', true, "")(class='extend')
               .register__form__btn
-                +button-small('GỬI')
-                +button-small('QUAY LẠI')
-
-            
+                .button-small
+                  button(type="submit") GỬI
+                +button-small('QUAY LẠI')       

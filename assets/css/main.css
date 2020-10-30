@@ -3530,4 +3530,124 @@ footer .footer__bottom .container .footer__bottom__right img {
   text-decoration: underline;
 }
 
+.contact .contact__title {
+  margin-top: 25px;
+  margin-bottom: 0;
+}
+.contact .contact__content {
+  margin-top: 30px;
+  margin-bottom: 125px;
+}
+.contact .contact__content .contact__content__container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 30px;
+}
+.contact .contact__content .contact__content__container .contact__content__left {
+  grid-column: 1/13;
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  .contact .contact__content .contact__content__container .contact__content__left {
+    grid-column: 1/9;
+  }
+}
+.contact .contact__content .contact__content__container .contact__content__left label {
+  width: 20%;
+  display: flex;
+}
+.contact .contact__content .contact__content__container .contact__content__left input, .contact .contact__content .contact__content__container .contact__content__left textarea {
+  width: 80%;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid #e6e6e6;
+  background-color: #fafafa;
+}
+.contact .contact__content .contact__content__container .contact__content__left .input-text {
+  margin-top: 55px;
+  margin-bottom: 0;
+}
+.contact .contact__content .contact__content__container .contact__content__left .input-text:not(:first-of-type) {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+.contact .contact__content .contact__content__container .contact__content__left .input-text label {
+  align-items: center;
+}
+.contact .contact__content .contact__content__container .contact__content__left .input-text-error {
+  width: 100%;
+}
+.contact .contact__content .contact__content__container .contact__content__left .input-text input {
+  height: 35px;
+  width: 100%;
+}
+.contact .contact__content .contact__content__container .contact__content__left .textarea-text {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+.contact .contact__content .contact__content__container .contact__content__left .textarea-text label {
+  align-items: flex-start;
+  display: inline-block;
+  width: 150px;
+}
+.contact .contact__content .contact__content__container .contact__content__left .textarea-text textarea {
+  height: 160px;
+  width: 100%;
+}
+.contact .contact__content .contact__content__container .contact__content__left .button-small {
+  margin-left: 16%;
+  margin-right: 0;
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+.contact .contact__content .contact__content__container .contact__content__right {
+  grid-column: 1/13;
+}
+@media (min-width: 768px) {
+  .contact .contact__content .contact__content__container .contact__content__right {
+    grid-column: 9/13;
+  }
+}
+.contact .contact__content .contact__content__container .contact__content__right img {
+  width: 160px;
+}
+.contact .contact__content .contact__content__container .contact__content__right > ul {
+  margin-top: 32px;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+.contact .contact__content .contact__content__container .contact__content__right > ul li {
+  float: none;
+  display: flex;
+}
+.contact .contact__content .contact__content__container .contact__content__right > ul li:not(:first-child) {
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+.contact .contact__content .contact__content__container .contact__content__right > ul li i {
+  flex-basis: 7%;
+}
+.contact .contact__content .contact__content__container .contact__content__right > ul li p {
+  flex-basis: 70%;
+}
+.contact .contact__content .contact__content__container .contact__content__right > p {
+  margin-top: 35px;
+  margin-bottom: 0;
+  font-size: 18px;
+}
+.contact .contact__content .contact__content__container .contact__content__right .contact__content__social {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+.contact .contact__content .contact__content__container .contact__content__right .contact__content__social ul li {
+  margin-left: 0;
+  margin-right: 20px;
+}
+.contact .contact__content .contact__content__container .contact__content__right .contact__content__social ul li a {
+  color: #818181;
+  font-size: 20px;
+}
+
 /*# sourceMappingURL=main.css.map */
