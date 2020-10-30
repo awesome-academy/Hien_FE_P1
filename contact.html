@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Wine House - Đăng Nhập</title>
+    <title>Wine House - Liên Hệ</title>
     <!-- FONT GOOGLE-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"/>
     <!-- FONT AWESOME-->
@@ -109,57 +109,84 @@
         </div>
       </div>
     </header>
-    <div class="login">
+    <div class="contact">
       <div class="link">
         <div class="wrapper">
           <ul>
             <li><a href="./index.html">Trang chủ</a></li>
-            <li><a class="active" href="./login.html">Đăng nhập</a></li>
+            <li><a class="active" href="./contact.html">Liên hệ</a></li>
           </ul>
         </div>
       </div>
-      <div class="login__title">
+      <div class="contact__title">
         <div class="wrapper">
-          <div class="login__title__container">
-            <div class="title-product">
-              <p>ĐĂNG NHẬP</p><img src="./assets/images/arrow.png"/>
-            </div><a class="button-big" href="./register.html">ĐĂNG KÝ</a>
+          <div class="title-product">
+            <p>LIÊN HỆ</p><img src="./assets/images/arrow.png"/>
           </div>
         </div>
       </div>
-      <div class="login__content">
+      <div class="contact__content">
         <div class="wrapper">
-          <div class="login__content__container">
-            <div class="login__content__title">
-              <p>KHÁCH HÀNG ĐĂNG NHẬP</p>
-              <p>Nếu bạn có một tài khoản, xin vui lòng đăng nhập.</p>
-            </div>
-            <div class="login__content__form">
+          <div class="contact__content__container">
+            <div class="contact__content__left">
+              <iframe width="100%" height="400" src="https://maps.google.com/maps?q=Chelsea%20Bridge&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
               <form action="#" method="post">
                 <div class="input-text">
-                  <label>Email<span>*</span>
+                  <label>Your Name
                   </label>
                   <div class="input-text-error">
-                    <input type="text" value="" name="Email"/>
+                    <input type="text" value="" name="Your Name"/>
                     <p> </p>
                   </div>
                 </div>
                 <div class="input-text">
-                  <label>Password<span>*</span>
+                  <label>Your Email
                   </label>
                   <div class="input-text-error">
-                    <input type="text" value="" name="Password"/>
+                    <input type="text" value="" name="Your Email"/>
                     <p> </p>
                   </div>
                 </div>
-                <div class="input-checkbox">
-                  <input type="checkbox" id="Quên mật khẩu" value=""/>
-                  <label for="Quên mật khẩu">Quên mật khẩu</label>
+                <div class="input-text">
+                  <label>Subject
+                  </label>
+                  <div class="input-text-error">
+                    <input type="text" value="" name="Subject"/>
+                    <p> </p>
+                  </div>
+                </div>
+                <div class="textarea-text">
+                  <label for="Your Message">Your Message
+                  </label>
+                  <textarea id="Your Message"></textarea>
                 </div>
                 <div class="button-small">
-                  <button type="submit">ĐĂNG NHẬP</button>
+                  <button type="submit">GỬI</button>
                 </div>
               </form>
+            </div>
+            <div class="contact__content__right"><img src="./assets/images/header-main-menu-logo.png"/>
+              <ul>
+                <li><i class="fa fa-map-marker"></i>
+                  <p>Tầng 4, Tòa nhà Hà Nội Group 442 Đội Cấn, P. Cống Vị, Q. Ba Đình, Hà Nội</p>
+                </li>
+                <li><i class="fa fa-phone"></i>
+                  <p>(04) 6674 2332</p>
+                </li>
+                <li><i class="fa fa-envelope"></i>
+                  <p>support@milano.com</p>
+                </li>
+              </ul>
+              <p>FOLLOW US:</p>
+              <div class="contact__content__social">
+                <ul>
+                  <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                  <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
