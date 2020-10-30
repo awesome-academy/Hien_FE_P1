@@ -3168,4 +3168,85 @@ footer .footer__bottom .container .footer__bottom__right img {
   margin-bottom: 0;
 }
 
+.register .register__title {
+  margin-top: 25px;
+  margin-bottom: 0;
+}
+.register .register__title .wrapper .register__title__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.register .register__content {
+  margin-top: 30px;
+  margin-bottom: 125px;
+}
+.register .register__content .wrapper .register__content__container {
+  padding-left: 55px;
+  padding-right: 67px;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  border: 1px solid #e6e6e6;
+  color: #000000;
+  font-size: 14px;
+}
+.register .register__content .wrapper .register__content__container .register__content__title p {
+  font-size: 18px;
+}
+.register .register__content .wrapper .register__content__container .register__content__form form > .input-text {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+.register .register__content .wrapper .register__content__container .register__content__form form > .input-text + .input-text {
+  margin-top: 25px;
+  margin-bottom: 0;
+}
+.register .register__content .wrapper .register__content__container .register__content__form form .input-text label {
+  flex-basis: 8%;
+}
+.register .register__content .wrapper .register__content__container .register__content__form form .input-text label span {
+  margin-left: 5px;
+  margin-right: 0;
+}
+.register .register__content .wrapper .register__content__container .register__content__form form .input-text-error {
+  width: 100%;
+}
+.register .register__content .wrapper .register__content__container .register__content__form form .input-text input {
+  flex-grow: 1;
+  height: 31px;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid #e7e7e7;
+}
+.register .register__content .wrapper .register__content__container .register__content__form form .extend label {
+  flex-basis: 14%;
+}
+.register .register__content .wrapper .register__content__container .register__content__form form .input-checkbox {
+  margin-top: 20px;
+  margin-bottom: 0;
+  margin-left: 8%;
+  margin-right: 0;
+}
+.register .register__content .wrapper .register__content__container .register__content__form form .input-checkbox label {
+  font-weight: bold;
+}
+.register .register__content .wrapper .register__content__container .register__content__form form .register__form__title {
+  margin-top: 32px;
+  margin-bottom: 0;
+}
+.register .register__content .wrapper .register__content__container .register__content__form form .register__form__title p {
+  font-size: 18px;
+}
+.register .register__content .wrapper .register__content__container .register__content__form form .register__form__btn {
+  display: flex;
+  justify-content: flex-end;
+}
+.register .register__content .wrapper .register__content__container .register__content__form form .register__form__btn .button-small {
+  margin-left: 7px;
+  margin-right: 0;
+  margin-top: 25px;
+  margin-bottom: 0;
+}
+
 /*# sourceMappingURL=main.css.map */
