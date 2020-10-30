@@ -242,7 +242,16 @@ mixin input-text(text, asterisk, value, id, idErorr)
         span *
     div.input-text-error
       input(type='text' id=id value=value name=text)
-      p(id= idErorr)   
+      p(id= idErorr) 
+
+mixin input-text-disabled(text, asterisk, value, id, idErorr)
+  .input-text(class!=attributes.class)
+    label(for=id)= text
+      if asterisk == true
+        span *
+    div.input-text-error
+      input(type='text' id=id value=value name=text disabled)
+      p(id= idErorr) 
 
 mixin input-checkbox(text, value)
   .input-checkbox
@@ -267,13 +276,16 @@ mixin comment(text1, text2, text3)
     .comment__content
       p= text3
     
-mixin address-1
+mixin address-1(content_btn)
   .address-1
     each item in address
-      +input-text(item.name, false, item.value, item.id)
+      if content_btn == "Chỉnh sửa địa chỉ"
+        +input-text-disabled(item.name, false, item.value, item.id)
+      else
+        +input-text(item.name, false, item.value, item.id)
     +input-checkbox('Đặt làm địa chỉ mặc định', "")
     .address-1__btn
-      +button-address('Chỉnh sửa địa chỉ')
+      +button-address(content_btn)
       +button-address('Xóa')
 
 mixin address-2
