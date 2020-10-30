@@ -31,7 +31,7 @@
   margin-right: 15px;
 }
 
-.button-address button, .button-big button, .btn-add-to-cart, .button-add-to-cart button, .button-small button {
+.button-address button, .button-big, .btn-add-to-cart, .button-add-to-cart button, .button-small button {
   background-color: #000000;
   color: #ffffff;
   font-family: "Times New Roman";
@@ -41,7 +41,7 @@
   font-size: 12px;
 }
 
-.button-big button {
+.button-big {
   font-size: 14px;
 }
 
@@ -1043,13 +1043,15 @@ footer .footer__bottom .container .footer__bottom__right img {
   background-color: #dfa949 !important;
 }
 
-.button-big button {
+.button-big {
+  line-height: 45px;
   height: 45px;
   padding-left: 45px;
   padding-right: 45px;
 }
-.button-big button:hover {
+.button-big:hover {
   background-color: #dfa949;
+  color: white !important;
 }
 
 .button-address button {
@@ -3095,6 +3097,75 @@ footer .footer__bottom .container .footer__bottom__right img {
 .blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-detail__right__comment .blog-detail__comment__page .active {
   color: #ffffff;
   background-color: #818181;
+}
+
+.login .login__title {
+  margin-top: 25px;
+  margin-bottom: 0;
+}
+.login .login__title .login__title__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.login .login__content {
+  margin-top: 30px;
+  margin-bottom: 125px;
+}
+.login .login__content .login__content__container {
+  padding-left: 55px;
+  padding-right: 67px;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  border: 1px solid #e6e6e6;
+  color: #000000;
+  font-size: 14px;
+}
+.login .login__content .login__content__container .login__content__title p:first-child {
+  font-size: 18px;
+}
+.login .login__content .login__content__container .login__content__title p:last-child {
+  margin-top: 15px;
+  margin-bottom: 0;
+  font-family: "Open Sans";
+}
+.login .login__content .login__content__container .login__content__form form > .input-text {
+  margin-top: 45px;
+  margin-bottom: 0;
+}
+.login .login__content .login__content__container .login__content__form form > .input-text + .input-text {
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+.login .login__content .login__content__container .login__content__form form .input-text label {
+  flex-basis: 8%;
+}
+.login .login__content .login__content__container .login__content__form form .input-text label span {
+  margin-left: 5px;
+  margin-right: 0;
+}
+.login .login__content .login__content__container .login__content__form form .input-text-error {
+  width: 100%;
+}
+.login .login__content .login__content__container .login__content__form form .input-text input {
+  flex-grow: 1;
+  height: 31px;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid #e7e7e7;
+}
+.login .login__content .login__content__container .login__content__form form .input-checkbox {
+  margin-top: 20px;
+  margin-bottom: 0;
+  margin-left: 8%;
+  margin-right: 0;
+}
+.login .login__content .login__content__container .login__content__form form .button-small {
+  margin-left: 8%;
+  margin-right: 0;
+  margin-top: 25px;
+  margin-bottom: 0;
 }
 
 /*# sourceMappingURL=main.css.map */
